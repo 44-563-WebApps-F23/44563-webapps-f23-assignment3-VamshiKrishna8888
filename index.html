@@ -86,8 +86,8 @@
             <h2>Code Display Section</h2> <!-- Heading -->
             
               Here's the link for Code snippet:
-              <a href="https://css-tricks.com/snippets/html/get-directions-form-google-maps/">
-                Get Directions Form (Google Maps)
+              <a href="https://css-tricks.com/snippets/css/typewriter-effect/">
+                Typewriter Effect
     
               </a>
     
@@ -97,30 +97,34 @@
             <blockquote>
                 <p>
                     Here's a relevant question from Stack Overflow: 
-                    <a href="https://stackoverflow.com/questions/18866696/form-to-get-directions-via-google-maps">
-                      Form to get directions via Google Maps                </a>
+                    <a href="https://stackoverflow.com/questions/63282120/how-to-create-typewriter-effect">
+                        How to create typewriter effect?                </a>
                 </p>
             </blockquote>
     
             <pre>
-                <div class="paper">
-.paper {
-  background: #fff;
-  box-shadow:
-    /* The top layer shadow */
-    0 1px 1px rgba(0,0,0,0.15),
-    /* The second layer */
-    0 10px 0 -5px #eee,
-    /* The second layer shadow */
-    0 10px 1px -4px rgba(0,0,0,0.15),
-     /* The third layer */
-    0 20px 0 -10px #eee,
-    /* The third layer shadow */
-    0 20px 1px -9px rgba(0,0,0,0.15);
-    /* Padding for demo purposes */
-    padding: 30px;
-}
-</div> </pre>
+                .typewriter h1 {
+                    overflow: hidden; /* Ensures the content is not revealed until the animation */
+                    border-right: .15em solid orange; /* The typwriter cursor */
+                    white-space: nowrap; /* Keeps the content on a single line */
+                    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                    letter-spacing: .15em; /* Adjust as needed */
+                    animation: 
+                      typing 3.5s steps(40, end),
+                      blink-caret .75s step-end infinite;
+                  }
+                  
+                  /* The typing effect */
+                  @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                  }
+                  
+                  /* The typewriter cursor effect */
+                  @keyframes blink-caret {
+                    from, to { border-color: transparent }
+                    50% { border-color: orange; }
+                  } </pre>
     
     
     </body>
